@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 
+스프링에게 도와달라고 요청하는 코드
+우리가 뭘 하는 것이 아니라 스프링에게 이대로 실행해달라고 부탁
+주객전도 = 제어 반저
+=스프링이 주도적으로 작업을 수행할 수 있도록 설정을 작성
+ -->
+ 
+	<beans:bean name = "/" class = "com.kh.spring02.MainController"></beans:bean>
+	<beans:bean name = "/dice" class = "com.kh.spring02.DiceController"></beans:bean>
+	<beans:bean name = "/plus" class = "com.kh.spring02.PlusController"></beans:bean>
+</beans:beans>

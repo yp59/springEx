@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+스프링 전역(global) 설정 파일
+사용자 요청과 관련없이 프로젝트 전반에 적용되어야 하는 설정 또는 도구를 등록하는 파일
+Spring-Beans : 스프링 객체의 등록에 관련된 내용을 지원하는 네임스페이스(기본)
+
+ -->
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<!-- Root Context: defines shared resources visible to all other web components -->
 		
 </beans>
