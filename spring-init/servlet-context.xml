@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- controller를 자동으로 등록하려면 어떻게 해야 하는가?
+		= 컴포넌트 스캐닝을 설정하여 자동으로 탐색한 뒤 등록하도록 처리
+		=스캐닝의 기준점이 될 위치를 설정
+		=spring-context에서 지원하는 기능을 사용
+	 -->
+	<context:component-scan base-package="com.kh.spring03"></context:component-scan>
+	
+	<!-- 뷰 리졸버
+	목표 : 컨트롤러에서 반환하는 주소를 간소화 시키ㅣ고 싶다
+	어차피 반복되는 앞/뒷부분을 자동으로 완성시켜 코드 효율성을 향상
+	view resolver(뷰 리졸버)를 등록하여 자동완성 구문을 설정
+	prefix(접두사), suffix(접미사)기능
+	 -->
+	 
+	<beans:bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<beans:property name = "prefix" value="/WEB-INF/views/"></beans:property><!-- 앞의 web-inf부분 자동으로 써지게 설정함 -->
+	<beans:property name ="suffix" value=".jsp"></beans:property><!-- controller에서 jsp부분을 알아서 써줌 -->
+	</beans:bean>
+	</beans:beans>
