@@ -12,8 +12,10 @@
 		=스캐닝의 기준점이 될 위치를 설정
 		=spring-context에서 지원하는 기능을 사용
 	 -->
-	<context:component-scan base-package="com.kh.home"></context:component-scan>
-	
+	<context:component-scan base-package="com.kh.home">
+	<!-- 컨트롤러만 등록하겠다(@Controller) -->
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
 	<!-- 뷰 리졸버
 	목표 : 컨트롤러에서 반환하는 주소를 간소화 시키ㅣ고 싶다
 	어차피 반복되는 앞/뒷부분을 자동으로 완성시켜 코드 효율성을 향상
