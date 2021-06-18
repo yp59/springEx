@@ -204,6 +204,12 @@ xmlns:schemaLocation - 실제 사용 가능한 태그에 대한 정보 참조 �
 		    <version>${org.springframework-version}</version>
 		</dependency>
 	    
+	    <dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.12</version>
+	    <scope>provided</scope>
+	</dependency>
 	   
 
 		    

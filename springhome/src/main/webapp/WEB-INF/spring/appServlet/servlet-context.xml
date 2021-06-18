@@ -39,4 +39,21 @@
 	<resources location="/resources/image/" mapping="/image/**"></resources>
 	<resources location="/resources/js/" mapping="/js/**"></resources>
 	
+	
+	
+	<!-- 
+	인터셉터 설정
+	-MemberLoginInterceptor
+	
+	 -->
+	 <interceptors>
+	 <interceptor>
+	 <mapping path="/member/**"/>
+	 <exclude-mapping path="/member/regist"/>
+	 <exclude-mapping path="/member/regist_success"/>
+	 <exclude-mapping path="/member/login"/>
+	 <exclude-mapping path="/member/goodbye"/>
+	 <beans:bean class = "com.kh.home.interceptor.MemberLoginInterceptor"></beans:bean>
+	 </interceptor>
+	 </interceptors>
 	</beans:beans>
